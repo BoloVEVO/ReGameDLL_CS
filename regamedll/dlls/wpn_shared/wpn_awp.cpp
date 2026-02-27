@@ -198,7 +198,7 @@ void CAWP::AWPFire(float flSpread, float flCycleTime, BOOL fUseAutoAim)
 
 void CAWP::Reload()
 {
-	if (m_pPlayer->ammo_338mag <= 0)
+	if (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] <= 0)
 		return;
 
 	if (DefaultReload(iMaxClip(), AWP_RELOAD, AWP_RELOAD_TIME))

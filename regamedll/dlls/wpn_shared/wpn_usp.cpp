@@ -249,7 +249,7 @@ void CUSP::USPFire(float flSpread, float flCycleTime, BOOL fUseSemi)
 
 void CUSP::Reload()
 {
-	if (m_pPlayer->ammo_45acp <= 0)
+	if (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] <= 0)
 		return;
 
 	int iAnim;

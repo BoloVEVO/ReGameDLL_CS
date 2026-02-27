@@ -170,7 +170,7 @@ void CP90::P90Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim)
 
 void CP90::Reload()
 {
-	if (m_pPlayer->ammo_57mm <= 0)
+	if (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] <= 0)
 		return;
 
 	if (DefaultReload(iMaxClip(), P90_RELOAD, P90_RELOAD_TIME))
