@@ -189,8 +189,10 @@ void CSG552::SG552Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim)
 
 void CSG552::Reload()
 {
-	if (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] <= 0)
+#ifndef REGAMEDLL_FIXES
+	if (m_pPlayer->ammo_556nato <= 0)
 		return;
+#endif
 
 	if (DefaultReload(iMaxClip(), SG552_RELOAD, SG552_RELOAD_TIME))
 	{
